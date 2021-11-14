@@ -2,7 +2,9 @@ package com.ineedyourcode.lesson1application11nov2021;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.transition.TransitionManager;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
@@ -17,6 +19,8 @@ public class SecondLayout extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_layout);
 
+        ViewGroup tContainer = findViewById(R.id.layout_second_activity);
+
         Button btnChangeLayout2to1 = findViewById(R.id.btn_change_layout_2_to_1);
         TextView txtBirthDate = findViewById(R.id.txt_birthdate);
         CalendarView calendar = findViewById(R.id.calendar);
@@ -27,7 +31,10 @@ public class SecondLayout extends AppCompatActivity {
             startActivity(intent);
         });
 
-        txtBirthDate.setOnClickListener(v -> calendar.setVisibility(View.VISIBLE));
+        txtBirthDate.setOnClickListener(v -> {
+            TransitionManager.beginDelayedTransition(tContainer);
+            calendar.setVisibility(View.VISIBLE);
+        });
 
         calendar.setOnDateChangeListener((view, year, month, dayOfMonth) -> {
             int mYear = year;
@@ -37,6 +44,7 @@ public class SecondLayout extends AppCompatActivity {
                     .append(String.valueOf(mMonth + 1).length() < 2 ? "0" + (mMonth + 1) : (mMonth + 1)).append(".")
                     .append(mYear).toString();
             txtBirthDate.setText(selectedDate);
+            TransitionManager.beginDelayedTransition(tContainer);
             calendar.setVisibility(View.GONE);
         });
     }

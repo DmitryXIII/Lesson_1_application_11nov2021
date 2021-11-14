@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_second_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_grey"
@@ -54,58 +55,26 @@
         android:inputType="textPersonName"
         android:textColor="@color/light_yellow"
         android:textColorHint="@color/light_grey"
-        android:textSize="12sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/txt_birthdate"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="30dp"
+        android:gravity="bottom"
+        android:hint="Date of birth"
         android:paddingLeft="4dp"
-        android:gravity="center_vertical"
-        android:hint="Your birthdate"
+        android:paddingBottom="3dp"
         android:textColor="@color/light_yellow"
         android:textColorHint="@color/light_grey"
-        android:textSize="12sp" />
+        android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/etxt_email"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="email"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/light_yellow"
-        android:textColorHint="@color/light_grey"
-        android:textSize="12sp" />
-
-    <EditText
-        android:id="@+id/etxt_phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="phone"
-        android:inputType="phone"
-        android:textColor="@color/light_yellow"
-        android:textColorHint="@color/light_grey"
-        android:textSize="12sp" />
-
-    <EditText
-        android:id="@+id/etxt_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="login"
-        android:inputType="text"
-        android:textColor="@color/light_yellow"
-        android:textColorHint="@color/light_grey"
-        android:textSize="12sp" />
-
-    <EditText
-        android:id="@+id/etxt_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="password"
-        android:inputType="textPassword"
-        android:textColor="@color/light_yellow"
-        android:textColorHint="@color/light_grey"
-        android:textSize="12sp" />
+        android:layout_height="1dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@color/underline" />
 
     <CalendarView
         android:id="@+id/calendar"
@@ -115,4 +84,47 @@
         android:layout_marginTop="8dp"
         android:background="@color/light_grey"
         android:firstDayOfWeek="2" />
+
+    <EditText
+        android:id="@+id/etxt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/light_yellow"
+        android:textColorHint="@color/light_grey"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etxt_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="phone"
+        android:inputType="phone"
+        android:textColor="@color/light_yellow"
+        android:textColorHint="@color/light_grey"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etxt_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="login"
+        android:inputType="text"
+        android:textColor="@color/light_yellow"
+        android:textColorHint="@color/light_grey"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etxt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textColor="@color/light_yellow"
+        android:textColorHint="@color/light_grey"
+        android:textSize="20sp" />
+
+
 </LinearLayout>

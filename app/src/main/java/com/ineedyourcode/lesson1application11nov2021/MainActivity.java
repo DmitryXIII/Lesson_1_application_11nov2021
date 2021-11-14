@@ -25,7 +25,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
-    private static int clickCounter;
+    protected static int clickCounter;
 
 
     @Override
@@ -86,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast toastYouAreDeveloper = Toast.makeText(getApplicationContext(), (clickCounter < 7) ? ("You are in " + (7 - clickCounter) + " steps away from being a developer!") : ("You are developer!"), Toast.LENGTH_SHORT);
                 toastYouAreDeveloper.setGravity(Gravity.BOTTOM, 0, 0);
                 toastYouAreDeveloper.show();
+            }
+            if (clickCounter > 7) {
+                clickCounter = 0;
             }
         });
     }

@@ -13,4 +13,5 @@
     <color name="red">#FF1100</color>
     <color name="dark_grey">#171717</color>
     <color name="light_grey">#808080</color>
+    <color name="underline">#AAAAAA</color>
 </resources>
