@@ -12,7 +12,6 @@ EMS уитывается только при установленном пара
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.Button;
@@ -25,8 +24,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
-    protected static int clickCounter;
-
+    private int clickCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,29 +52,29 @@ public class MainActivity extends AppCompatActivity {
 
         checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (buttonView.isChecked()) {
-                txtCheckBoxStatus.setText("CheckBox is checked");
+                txtCheckBoxStatus.setText(R.string.checkbox_is_checked);
                 switcher.setChecked(false);
             } else {
-                txtCheckBoxStatus.setText("CheckBox is unchecked");
+                txtCheckBoxStatus.setText(R.string.checkbox_is_unchecked);
                 switcher.setChecked(true);
             }
         });
 
         switcher.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (buttonView.isChecked()) {
-                txtSwitchStatus.setText("Switch is checked");
+                txtSwitchStatus.setText(R.string.switch_is_checked);
                 checkBox.setChecked(false);
             } else {
-                txtSwitchStatus.setText("Switch is unchecked");
+                txtSwitchStatus.setText(R.string.switch_is_unchecked);
                 checkBox.setChecked(true);
             }
         });
 
         toggleGreenBG.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (buttonView.isChecked()) {
-                activityMain.setBackgroundColor(Color.parseColor("#B8FFBB"));
+                activityMain.setBackgroundColor(getColor(R.color.mint));
             } else {
-                activityMain.setBackgroundColor(Color.parseColor("#FFFFF8C0"));
+                activityMain.setBackgroundColor(getColor(R.color.light_yellow));
             }
         });
 

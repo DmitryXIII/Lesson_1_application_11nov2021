@@ -37,12 +37,9 @@ public class SecondLayout extends AppCompatActivity {
         });
 
         calendar.setOnDateChangeListener((view, year, month, dayOfMonth) -> {
-            int mYear = year;
-            int mMonth = month;
-            int mDay = dayOfMonth;
-            String selectedDate = new StringBuilder().append(String.valueOf(mDay).length() < 2 ? "0" + mDay : mDay).append(".")
-                    .append(String.valueOf(mMonth + 1).length() < 2 ? "0" + (mMonth + 1) : (mMonth + 1)).append(".")
-                    .append(mYear).toString();
+            String selectedDate = (String.valueOf(dayOfMonth).length() < 2 ? "0" + dayOfMonth : dayOfMonth) + "." +
+                    (String.valueOf(month + 1).length() < 2 ? "0" + (month + 1) : (month + 1)) + "." +
+                    year;
             txtBirthDate.setText(selectedDate);
             TransitionManager.beginDelayedTransition(tContainer);
             calendar.setVisibility(View.GONE);
