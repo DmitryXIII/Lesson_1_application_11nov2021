@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Lesson 1 Application 11nov2021</string>
+    <string name="checkbox_is_checked">CheckBox is checked</string>
+    <string name="checkbox_is_unchecked">CheckBox is unchecked</string>
+    <string name="switch_is_checked">Switch is checked</string>
+    <string name="switch_is_unchecked">Switch is unchecked</string>
+    <string name="layout_1">LAYOUT_1</string>
+    <string name="change_layout">Change layout</string>
+    <string name="type_anything_here">Type anything here</string>
+    <string name="type_and_click">TYPE AND CLICK</string>
+    <string name="mint_background_off">Mint background OFF</string>
+    <string name="mint_background_on">Mint background ON</string>
+    <string name="build_number">Build number: sdk_gphone x86 userdebug 8.1.0</string>
 </resources>
